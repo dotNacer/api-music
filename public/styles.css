@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+nav {
+    background-color: #333;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ddd;
+}
+
+.section {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hidden {
+    display: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 1rem 0;
+}
+
+input,
+select,
+button {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.list-section {
+    margin-top: 2rem;
+}
+
+.item-card {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-info {
+    flex-grow: 1;
+}
+
+.item-actions {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.download-button {
+    text-decoration: none;
+}
+
+.download-button button {
+    background-color: #28a745;
+}
+
+.download-button button:hover {
+    background-color: #218838;
+}
+
+/* Ajouter ces styles pour améliorer l'apparence des catégories */
+#categories .item-card {
+    background-color: #e9ecef;
+    border-left: 4px solid #007bff;
+}
+
+select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.create-section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+}
+
+/* Styles pour la section lyrics */
+textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: vertical;
+    font-family: inherit;
+}
+
+.lyrics-content {
+    white-space: pre-wrap;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    font-family: inherit;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#lyrics .item-card {
+    flex-direction: column;
+}
+
+#lyrics .item-actions {
+    margin-top: 1rem;
+    align-self: flex-end;
+}
+
+.cover-image {
+    max-width: 200px;
+    max-height: 200px;
+    object-fit: contain;
+    margin: 10px 0;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#covers .item-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#covers .item-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}

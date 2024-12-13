@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Gestionnaire de Projets Musicaux</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#" data-section="beats">Beats</a></li>
+                    <li><a href="#" data-section="covers">Covers</a></li>
+                    <li><a href="#" data-section="projects">Projets</a></li>
+                    <li>
+                        <a href="#" data-section="categories">Catégories</a>
+                    </li>
+                    <li><a href="#" data-section="lyrics">Paroles</a></li>
+                </ul>
+            </nav>
+
+            <main>
+                <!-- Section Beats -->
+                <section id="beats" class="section">
+                    <h2>Gestion des Beats</h2>
+                    <div class="upload-section">
+                        <h3>Ajouter un Beat</h3>
+                        <form id="beatUploadForm">
+                            <input
+                                type="file"
+                                name="file"
+                                accept="audio/*"
+                                required
+                            />
+                            <select name="categorie_id" required>
+                                <option value="">
+                                    Sélectionner une catégorie
+                                </option>
+                            </select>
+                            <select name="lyrics_id">
+                                <option value="">
+                                    Sélectionner des paroles (optionnel)
+                                </option>
+                            </select>
+                            <button type="submit">Uploader</button>
+                        </form>
+
+                        <h3>Télécharger depuis YouTube</h3>
+                        <form id="youtubeForm">
+                            <input
+                                type="url"
+                                name="url"
+                                placeholder="URL YouTube"
+                                required
+                            />
+                            <select name="categorie_id" required>
+                                <option value="">
+                                    Sélectionner une catégorie
+                                </option>
+                            </select>
+                            <select name="lyrics_id">
+                                <option value="">
+                                    Sélectionner des paroles (optionnel)
+                                </option>
+                            </select>
+                            <button type="submit">Télécharger</button>
+                        </form>
+                    </div>
+
+                    <div class="list-section">
+                        <h3>Liste des Beats</h3>
+                        <div id="beatsList"></div>
+                    </div>
+                </section>
+
+                <!-- Section Covers -->
+                <section id="covers" class="section hidden">
+                    <h2>Gestion des Covers</h2>
+                    <div class="upload-section">
+                        <h3>Ajouter une Cover</h3>
+                        <form id="coverUploadForm">
+                            <input
+                                type="file"
+                                name="file"
+                                accept="image/*"
+                                required
+                            />
+                            <input
+                                type="text"
+                                name="title"
+                                placeholder="Titre"
+                                required
+                            />
+                            <button type="submit">Uploader</button>
+                        </form>
+                    </div>
+
+                    <div class="list-section">
+                        <h3>Liste des Covers</h3>
+                        <div id="coversList"></div>
+                    </div>
+                </section>
+
+                <!-- Section Projets -->
+                <section id="projects" class="section hidden">
+                    <h2>Gestion des Projets</h2>
+                    <div class="create-section">
+                        <h3>Créer un Projet</h3>
+                        <form id="projectForm">
+                            <select name="beat_id" required>
+                                <option value="">Sélectionner un beat</option>
+                            </select>
+                            <select name="cover_id" required>
+                                <option value="">Sélectionner une cover</option>
+                            </select>
+                            <button type="submit">Créer</button>
+                        </form>
+                    </div>
+
+                    <div class="list-section">
+                        <h3>Liste des Projets</h3>
+                        <div id="projectsList"></div>
+                    </div>
+                </section>
+
+                <!-- Section Catégories -->
+                <section id="categories" class="section hidden">
+                    <h2>Gestion des Catégories</h2>
+                    <div class="create-section">
+                        <h3>Créer une Catégorie</h3>
+                        <form id="categoryForm">
+                            <input
+                                type="text"
+                                name="name"
+                                placeholder="Nom de la catégorie"
+                                required
+                                maxlength="25"
+                            />
+                            <button type="submit">Créer</button>
+                        </form>
+                    </div>
+
+                    <div class="list-section">
+                        <h3>Liste des Catégories</h3>
+                        <div id="categoriesList"></div>
+                    </div>
+                </section>
+
+                <!-- Section Paroles -->
+                <section id="lyrics" class="section hidden">
+                    <h2>Gestion des Paroles</h2>
+                    <div class="create-section">
+                        <h3>Ajouter des Paroles</h3>
+                        <form id="lyricsForm">
+                            <input
+                                type="text"
+                                name="title"
+                                placeholder="Titre des paroles"
+                                required
+                                maxlength="255"
+                            />
+                            <textarea
+                                name="lyrics"
+                                placeholder="Contenu des paroles"
+                                required
+                                rows="10"
+                            ></textarea>
+                            <button type="submit">Créer</button>
+                        </form>
+                    </div>
+
+                    <div class="list-section">
+                        <h3>Liste des Paroles</h3>
+                        <div id="lyricsList"></div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <script src="app.js"></script>
+    </body>
+</html>
