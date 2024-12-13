@@ -88,8 +88,8 @@ Le modèle de données est structuré autour de cinq entités principales :
 1. Cloner le repository
 
 ```bash
-git clone [url-du-repo]
-cd music-project-manager
+git clone git@github.com:dotNacer/api-music.git
+cd api-music
 ```
 
 2. Installer les dépendances
@@ -98,13 +98,7 @@ cd music-project-manager
 npm install
 ```
 
-3. Créer les dossiers nécessaires
-
-```bash
-mkdir -p uploads/beats uploads/covers
-```
-
-4. Lancer l'application
+3. Lancer l'application
 
 ```bash
 npm run dev
